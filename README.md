@@ -1,4 +1,7 @@
-# dash
+# Pinax Dashboard
+
+A dashboard to display point-in-time and interval metrics about the Pinax
+Project, in addition to other metadata like release histories.
 
 ## Getting Started
 
