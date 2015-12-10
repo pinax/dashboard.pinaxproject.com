@@ -1,0 +1,30 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+<h1>Pinax Releases</h1>
+
+<canvas id="myChart" data-chart-data-url="{% url "releases_data" %}" width="1138" height="200"></canvas>
+
+<div class="panel panel-default">
+    <table class="table">
+        <thead><tr><th>Name</th><th class="text-right">Version</th><th class="text-right">Commits</th><th class="text-right">Date</th></tr></thead>
+        <tbody>
+            {% for release in release_list %}
+            <tr>
+                <td>{{ release.name }}</td>
+                <td class="text-right">
+                    {{ release.version }}
+                    <a href="{{ release.pypi_url }}"><i class="fa fa-fw fa-download"></i></a>
+                </td>
+                <td class="text-right">
+                    {{ release.commits }}
+                    <a href="{{ release.changeset_url }}"><i class="fa fa-fw fa-github"></i></a>
+                </td>
+                <td class="text-right">{{ release.date }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+</div>
+
+{% include "pagination/builtin_pagination.html" %}
+{% endblock %}
