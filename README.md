@@ -1,9 +1,7 @@
 Pinax Dashboard
 =================
 
-.. image:: http://slack.pinaxproject.com/badge.svg
-   :target: http://slack.pinaxproject.com/
-   
+[![](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
 
 Pinax
 ------
